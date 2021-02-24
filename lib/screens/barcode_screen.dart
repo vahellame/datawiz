@@ -1,5 +1,8 @@
+import 'package:datawiz/core/adding_review.dart';
 import 'package:datawiz/core/data.dart';
+import 'package:datawiz/screens/adding_review_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class BarcodeScreen extends StatelessWidget {
   const BarcodeScreen(this.barcodeID);
@@ -46,8 +49,7 @@ class BarcodeScreen extends StatelessWidget {
                       child: Column(
                         children: [
                           Text(
-                            'Отправил: ${barcode['reviews'][index]['display_name']}'
-                          ),
+                              'Отправил: ${barcode['reviews'][index]['display_name']}'),
                           Text('${barcode['reviews'][index]['email']}'),
                           Text(''),
                           Text('${barcode['reviews'][index]['text']}'),
@@ -75,9 +77,14 @@ class BarcodeScreen extends StatelessWidget {
       ),
       backgroundColor: Colors.white,
       floatingActionButton: FloatingActionButton(
-        child: const Icon(Icons.add),
-        onPressed: () {},
-      ),
+          child: const Icon(Icons.add),
+          onPressed: () {
+            context.read<AddingReview>().changeBarcodeID(barcodeID);
+            Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => AddingReviewScreen()));
+          }),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
     );
   }

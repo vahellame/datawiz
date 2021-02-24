@@ -8,13 +8,12 @@ class AddingReview with ChangeNotifier {
   AddingReview();
 
   String text = '';
-  int _barcodeID;
+  int barcodeID;
 
-  int get barcodeID => _barcodeID;
 
   Future<void> addReview () async {
     final data = {
-      'barcode_id': _barcodeID + 1,
+      'barcode_id': barcodeID + 1,
       'text': text,
       'email': Data.email,
       'display_name': Data.displayName,
@@ -30,6 +29,6 @@ class AddingReview with ChangeNotifier {
   }
 
   void changeBarcodeID(data) {
-    _barcodeID = data;
+    barcodeID = data;
   }
 }

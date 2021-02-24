@@ -1,9 +1,7 @@
-import 'package:datawiz/core/adding_review.dart';
 import 'package:datawiz/core/data.dart';
 import 'package:datawiz/screens/barcode_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:provider/provider.dart';
 
 class BarcodeCard extends StatelessWidget {
   BarcodeCard(this.barcodeID);
@@ -35,7 +33,6 @@ class BarcodeCard extends StatelessWidget {
         padding: const EdgeInsets.fromLTRB(10, 10, 10, 10),
       ),
       onTap: () {
-        context.read<AddingReview>().changeBarcodeID(barcodeID);
         Navigator.push(
           context,
           MaterialPageRoute(builder: (context) => BarcodeScreen(barcodeID)),

@@ -1,14 +1,14 @@
-import 'package:datawiz/core/adding_barcode.dart';
 import 'package:datawiz/core/adding_review.dart';
 import 'package:datawiz/core/functions/fetch_barcodes.dart';
 import 'package:datawiz/screens/barcode_screen.dart';
-import 'package:datawiz/screens/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:provider/provider.dart';
 
-class AddingBarcodeScreen extends StatelessWidget {
-  const AddingBarcodeScreen();
+import 'home_screen.dart';
+
+class AddingReviewScreen extends StatelessWidget {
+  AddingReviewScreen();
 
   @override
   Widget build(BuildContext context) {
@@ -47,7 +47,7 @@ class AddingBarcodeScreen extends StatelessWidget {
                   await context.read<AddingReview>().addReview();
                   await fetchBarcodes();
                   context.read<AddingReview>().changeText('');
-                  final barcodeID = context.watch<AddingReview>().barcodeID;
+                  int barcodeID = context.read<AddingReview>().barcodeID;
                   Navigator.pushReplacement(
                     context,
                     MaterialPageRoute(builder: (context) => BarcodeScreen(barcodeID)),
