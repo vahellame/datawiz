@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "263776045019",
+    "project_id": "datawiz-99bd9",
+    "storage_bucket": "datawiz-99bd9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:263776045019:android:d31acb019fa93660f509fe",
+        "android_client_info": {
+          "package_name": "vahella.me.datawiz"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "263776045019-rohrlst8s7bkbfrl834c93dohudbj39t.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "vahella.me.datawiz",
+            "certificate_hash": "3fa4f24e5e10a8671765a21bc57f29e37263a647"
+          }
+        },
+        {
+          "client_id": "263776045019-kmej7qt1861qqa4jshvu824flknfq0h3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBgyyjo1qiZLBfbLGmX00P073SQhwIOq1c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "263776045019-kmej7qt1861qqa4jshvu824flknfq0h3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
