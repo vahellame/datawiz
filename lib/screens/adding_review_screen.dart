@@ -5,8 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:provider/provider.dart';
 
-import 'home_screen.dart';
-
 class AddingReviewScreen extends StatelessWidget {
   AddingReviewScreen();
 
